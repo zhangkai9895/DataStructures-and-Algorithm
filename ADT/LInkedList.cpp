@@ -27,7 +27,6 @@ Node * initList() {
 		a->next = NULL;
 		temp->next = a;
 		temp = temp->next;
-
 	}
 	return p;
 }
@@ -40,4 +39,36 @@ void display(Node* p){
 		temp = temp->next;
 	}
 }
+
+void insert(Node *p,int data, int position) {
+	Node* temp = p;
+	for (int i = 1; i < position; i++) {
+		if (temp->next == NULL) {
+			printf("wrong place");
+			return ;
+		}
+		temp = temp->next;
+	}
+	Node *c = (Node*)malloc(sizeof(node));
+	c->data = data;
+	c->next = temp->next;
+	temp->next = c;
+}
+
+void isEmpty(Node* p) {
+	if (p->next == NULL) {
+		printf("empty list");
+	}
+	else {
+		printf("not empty");
+	}
+}
+
+Node* find(Node* p,int data) {
+	Node* temp = p;
+	
+}
+
+
+
 
