@@ -25,6 +25,7 @@ stack  CreateStack() {
 void MakeEmpety(){
 }
 
+//Ñ¹Õ»²Ù×÷
 void Push(stack s,int data) {
 	stack temp = (stack)malloc(sizeof(node));
 	if (temp == NULL) {
@@ -38,14 +39,14 @@ void Push(stack s,int data) {
 	}
 }
 void Pop(stack s) {
-	/*stack temp = (stack)malloc(sizeof(node));*/
+	stack temp = (stack)malloc(sizeof(node));
 	if (isEmpty(s)) {
 		printf("empty stack");
 	}
 	else {
-		//temp = s->next;
+		temp = s->next;
 		s->next = s->next->next;
-		free(s->next);
+		free(temp);
 	}
 }
 
